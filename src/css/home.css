@@ -2,9 +2,53 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
+  font-family: "Inter", sans-serif;
 }
-body header {
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+header .icon-container {
+  padding: 0 0 0 30px;
+}
+header nav {
+  display: flex;
+  padding: 0 20px 0 0;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  margin: 0 1.5rem;
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  color: hsl(240, 100%, 5%);
+}
+header .burguer-menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+  header .burguer-menu {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
