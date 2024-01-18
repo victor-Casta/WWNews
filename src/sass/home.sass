@@ -14,6 +14,7 @@ body
 
 main
   max-width: 1300px
+  min-width: 317px
   margin: 0 auto
 
 header
@@ -44,7 +45,7 @@ header
   width: 100%
   display: grid
   grid-template-columns: 4fr 2fr
-  grid-template-rows: 1fr
+  grid-template-rows: 2fr
   .principal-news
     width: 95%
     .data-news
@@ -54,14 +55,13 @@ header
       h1
         width: 40%
         font-size: 3rem
-        padding: 0 2rem
+        padding: 0 2rem 0 0
         margin: 0
       .content-news
-        width: 100%
+        width: 60%
         height: 100%
         display: flex
         flex-direction: column
-        width: 60%
         p 
           margin: 0
           font-size: $paragrhap
@@ -94,6 +94,34 @@ header
       p 
         color: $neutral-off-white
         font-size: $paragrhap
+  .popular-news
+    width: 100%
+    margin-top: 5rem    
+    display: flex
+    grid-column: span 2 
+    article
+      display: flex
+      align-items: center
+      margin: 0 2rem 0 0
+      .picture img
+        width: 9rem
+        object-fit: cover
+      .description
+        padding: 0 0 0 1.4rem
+        .number-item
+          font-size: 2rem
+          margin: 0 0 1.4rem 0
+          padding: 0
+          font-weight: 800
+          color: $neutral-Grayish-bue
+        h2
+          margin: 0 0 1rem 0
+          padding: 0
+          font-size: 20px
+          color: $neutral-dark-blue
+        .description-item
+          line-height: 1.3rem
+          color: $neutral-dark-blue
 
 
 
@@ -104,7 +132,18 @@ header
     display: block
     margin: 0 auto
   .principal-content
-    grid-template-columns: 1fr
-    grid-template-rows: 1fr 1fr
+    display: flex
+    flex-direction: column
+    align-items: center
+    .data-news
+      width: 100%
+      margin: 0 0 3rem 0
+      flex-direction: column
+      h1
+        width: 100% !important
+      .content-news
+        width: 100% !important
+    .popular-news
+      flex-direction: column
 
 

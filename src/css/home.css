@@ -7,6 +7,7 @@ body {
 
 main {
   max-width: 1300px;
+  min-width: 317px;
   margin: 0 auto;
 }
 
@@ -45,7 +46,7 @@ header .burguer-menu {
   width: 100%;
   display: grid;
   grid-template-columns: 4fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 2fr;
 }
 .principal-content .principal-news {
   width: 95%;
@@ -58,15 +59,14 @@ header .burguer-menu {
 .principal-content .principal-news .data-news h1 {
   width: 40%;
   font-size: 3rem;
-  padding: 0 2rem;
+  padding: 0 2rem 0 0;
   margin: 0;
 }
 .principal-content .principal-news .data-news .content-news {
-  width: 100%;
+  width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  width: 60%;
 }
 .principal-content .principal-news .data-news .content-news p {
   margin: 0;
@@ -108,6 +108,41 @@ header .burguer-menu {
   color: hsl(36, 100%, 99%);
   font-size: 15px;
 }
+.principal-content .popular-news {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  grid-column: span 2;
+}
+.principal-content .popular-news article {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem 0 0;
+}
+.principal-content .popular-news article .picture img {
+  width: 9rem;
+  object-fit: cover;
+}
+.principal-content .popular-news article .description {
+  padding: 0 0 0 1.4rem;
+}
+.principal-content .popular-news article .description .number-item {
+  font-size: 2rem;
+  margin: 0 0 1.4rem 0;
+  padding: 0;
+  font-weight: 800;
+  color: hsl(233, 8%, 79%);
+}
+.principal-content .popular-news article .description h2 {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  font-size: 20px;
+  color: hsl(240, 100%, 5%);
+}
+.principal-content .popular-news article .description .description-item {
+  line-height: 1.3rem;
+  color: hsl(240, 100%, 5%);
+}
 
 @media (max-width: 800px) {
   header nav {
@@ -118,8 +153,23 @@ header .burguer-menu {
     margin: 0 auto;
   }
   .principal-content {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .principal-content .data-news {
+    width: 100%;
+    margin: 0 0 3rem 0;
+    flex-direction: column;
+  }
+  .principal-content .data-news h1 {
+    width: 100% !important;
+  }
+  .principal-content .data-news .content-news {
+    width: 100% !important;
+  }
+  .principal-content .popular-news {
+    flex-direction: column;
   }
 }
 
